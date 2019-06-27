@@ -1,15 +1,15 @@
 'use strict';
 
-const express = require('express');
+// const express = require('express');
 const fs = require('fs');
 
-// Constants
-const PORT = 8085;
-const HOST = 'localhost';
+// // Constants
+// const PORT = 8085;
+// const HOST = 'localhost';
 
-// App
-const app = express();
-app.get('/', (req, res) => {
+// // App
+// const app = express();
+// app.get('/', (req, res) => {
 
   fs.readFile(`${__dirname}/sum.txt`, 'utf-8', (err, data) => {
         if (!err) {
@@ -26,12 +26,15 @@ app.get('/', (req, res) => {
             if (error) {
               console.log('error:', error);
             }
+            else{
+            	console.log("write successfully.");
+            }
           });
         }
       });
 
-  res.send('Hello world\n');
-});
+//   res.send('Hello world\n');
+// });
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+// app.listen(PORT, HOST);
+// console.log(`Running on http://${HOST}:${PORT}`);
