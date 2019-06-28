@@ -20,6 +20,7 @@ const fs = require('fs');
           }
           else {
             result = (parseInt(data) + 5);
+            console.log(result);
           }
 
           fs.writeFile(`${__dirname}/sum.txt`, result, (error) => {
